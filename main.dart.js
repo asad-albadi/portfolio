@@ -61360,7 +61360,7 @@ A.a0K.prototype={
 $0(){},
 $S:0}
 A.zl.prototype={
-P(a){var s=A.a([B.xt,B.xo,B.xp,B.xs,B.xq,B.xn,B.xm,B.xr],t.BY)
+P(a){var s=A.a([B.xt,B.xo,B.xp,B.xr,B.xs,B.xn,B.xm,B.xq],t.BY)
 B.b.dF(s,new A.OF())
 return A.n_(A.a8m(B.vc,s),null,null)}}
 A.OF.prototype={
@@ -64398,9 +64398,9 @@ B.xm=new A.de("Machine Learning with Python: Foundations","Mar 2023","LinkedIn L
 B.xn=new A.de("Using Python for Automation","May 2022","LinkedIn Learning",null)
 B.xo=new A.de("IPv6 Fundamentals, Design and Deployment","June 2020","Cisco",null)
 B.xp=new A.de("Prepare for the CompTIA Network+ (N10-007) Certification","Oct 2020","LinkedIn Learning",null)
-B.xq=new A.de("Designing and Implementing a Data Science Solution on Azure (A)","Frv 2021","Microsoft",null)
-B.xr=new A.de("Mobile Testing with Appium","May 2023","LinkedIn Learning",null)
-B.xs=new A.de("Cisco CCNA (200-301) Cert Prep: Security, Automation, and Programmability","Oct 2020","LinkedIn Learning",null)
+B.xq=new A.de("Mobile Testing with Appium","May 2023","LinkedIn Learning",null)
+B.xr=new A.de("Cisco CCNA (200-301) Cert Prep: Security, Automation, and Programmability","Oct 2020","LinkedIn Learning",null)
+B.xs=new A.de("Designing and Implementing a Data Science Solution on Azure (A)","Dec 2021","Microsoft",null)
 B.xt=new A.de("System Administration and IT Infrastructure Services","May 2020","Google / Coursera",null)
 B.xu=new A.zl(null)
 B.xv=new A.qn(null,null,null,null,null,null,null,null,null)
