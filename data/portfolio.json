@@ -168,6 +168,23 @@
     }
   },
   {
+    "id": 20,
+    "title": "Retention Platform",
+    "category": "automation",
+    "image": "assets/images/portfolio/mirsah-retention.svg",
+    "description": "Retention platform that turns port-out intent into managed customer cases and fulfilment.",
+    "tags": [
+      "CVM",
+      "Automation"
+    ],
+    "url": "#",
+    "isRedacted": true,
+    "details": {
+      "client": "Vodafone Oman",
+      "completed": "2026"
+    }
+  },
+  {
     "id": 9,
     "title": "Unified Operations Dashboard",
     "category": "dashboard",
