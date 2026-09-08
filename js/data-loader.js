@@ -196,6 +196,44 @@ document.addEventListener('DOMContentLoaded', () => {
   function loadResumeSection(data) {
     const resumeSection = document.getElementById('resume');
     if (!resumeSection) return;
+
+    // Total distinct calendar months across all roles. Adjacent jobs are merged
+    // so a same-month transition is counted once; "Present" uses this month.
+    const totalExperience = (jobs) => {
+      const monthIndex = (value) => {
+        if (/^present$/i.test(String(value).trim())) {
+          const now = new Date();
+          return now.getFullYear() * 12 + now.getMonth();
+        }
+        const match = String(value).trim().match(/^([a-zA-Z]+)\s+(\d{4})$/);
+        if (!match) return null;
+        const months = {
+          jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5,
+          jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11
+        };
+        const month = months[match[1].slice(0, 3).toLowerCase()];
+        return month === undefined ? null : Number(match[2]) * 12 + month;
+      };
+      const ranges = (jobs || []).map(({ period }) => {
+        const [start, end] = String(period || '').split(/\s+[–—-]\s+/);
+        const from = monthIndex(start);
+        const to = monthIndex(end);
+        return from === null || to === null || to < from ? null : { from, to };
+      }).filter(Boolean).sort((a, b) => a.from - b.from);
+      const merged = ranges.reduce((all, range) => {
+        const previous = all[all.length - 1];
+        if (previous && range.from <= previous.to + 1) previous.to = Math.max(previous.to, range.to);
+        else all.push({ ...range });
+        return all;
+      }, []);
+      const months = merged.reduce((sum, range) => sum + range.to - range.from + 1, 0);
+      const years = Math.floor(months / 12);
+      const remainder = months % 12;
+      return [
+        years && `${years} yr${years === 1 ? '' : 's'}`,
+        remainder && `${remainder} mo${remainder === 1 ? '' : 's'}`
+      ].filter(Boolean).join(' ');
+    };
     
     // Set section title
     const sectionHeader = resumeSection.querySelector('.section-header h2');
@@ -206,6 +244,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Work Experience
     const experienceTimeline = resumeSection.querySelector('.resume-section:nth-of-type(1) .timeline');
     if (experienceTimeline) {
+      const experienceTotal = resumeSection.querySelector('.experience-total');
+      const total = totalExperience(data.experience);
+      if (experienceTotal) experienceTotal.textContent = total ? `· ${total}` : '';
       experienceTimeline.innerHTML = '';
       data.experience.forEach(job => {
         const timelineItem = document.createElement('div');

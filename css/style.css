@@ -59,6 +59,11 @@ h1, h2, h3, h4 {
   margin-bottom: var(--s-3);
 }
 
+.experience-total {
+  color: var(--accent);
+  margin-left: var(--s-2);
+}
+
 .accent { color: var(--accent); }
 
 /* ---- Decorative background -------------------------------- */
