@@ -72,8 +72,8 @@
   <g font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#5c6677">
     <text x="416" y="83">opnsense</text>
     <text x="416" y="136">unifi sw</text>
-    <text x="416" y="189">node 01</text>
-    <text x="416" y="242">node 02</text>
+    <text x="416" y="189">docker host</text>
+    <text x="416" y="242">pve cluster</text>
     <text x="416" y="295">truenas</text>
     <text x="416" y="348">pi &#215;5</text>
   </g>

@@ -51,24 +51,24 @@
       ] 
     }
   ],
-  "homelabTitle": "The Digital Forge – My Homelab",
+  "homelabTitle": "My Homelab",
   "homelabDetails": {
     "links": [
       { "url": "https://gist.github.com/asad-albadi/35387bd422d295fd79416d42febe7f7d", "icon": "fab fa-github-alt", "label": "Gist" }
     ],
     "image": "assets/images/homelab.svg",
-    "description": "My personal homelab is a complete ecosystem for development, automation, self-hosting, and smart-home orchestration. It runs on a mix of Proxmox and Docker hosts, a dedicated TrueNAS storage server, and a Raspberry Pi fleet — all behind an OPNsense firewall on a full 2.5G UniFi network and securely published through Cloudflare Zero Trust. This environment powers my daily development workflows, local AI experiments, automation pipelines, 3D-printing operations, and shared family services.",
-"specs": [
-  "**Compute & Virtualization:** Proxmox on a Ryzen 7 mini-PC alongside dual ThinkCentre M910q Docker hosts",
-  "**Storage:** Custom-built TrueNAS Core server with RAID-backed media and backups",
-  "**Dev & AI:** Mac Mini M4 dedicated to development and local LLM workloads",
-  "**Edge Compute:** Raspberry Pi 4 and Pi 5 fleet for utility and controller nodes",
-  "**Networking:** OPNsense firewall with a full 2.5G UniFi stack — PoE switching and WiFi 7",
-  "**Secure Access:** Cloudflare Zero Trust tunnels — internal services with no inbound ports",
-  "**Self-Hosted Services:** 15+ containerized apps spanning automation, media, and dashboards",
-  "**Home Automation:** Home Assistant with Zigbee and Frigate camera AI",
-  "**3D Printing:** Elegoo Centauri Carbon 2 and Creality Hi with automated monitoring"
-]
+    "description": "A production-grade personal cloud for development, automation, media, gaming, and smart-home services. A dedicated Debian Docker host runs alongside a three-node Proxmox VE cluster, TrueNAS Core storage, and Raspberry Pi utility nodes — all behind OPNsense and a UniFi network. Cloudflare Zero Trust publishes selected services securely without opening inbound firewall ports.",
+    "specs": [
+      "**Docker Host:** ThinkCentre M910q — i5-6500T, 16 GB RAM, 500 GB SSD, running Debian 12",
+      "**Proxmox Cluster:** Three Proxmox VE 9.2.2 nodes — one M910q and two M710q systems",
+      "**Cluster Capacity:** 64 GB total RAM with dedicated NVMe storage on pve2 and pve4",
+      "**Storage:** TrueNAS Core on an Intel N6005 with 16 GB RAM, six SATA bays, RAID-backed storage, and ~11 TB NFS backups",
+      "**Edge Nodes:** Four Raspberry Pi 4 units plus a Raspberry Pi 5 for utility and controller workloads",
+      "**Networking:** RiftRaven OPNsense firewall, 2.5G UniFi core, PoE switching, and Wi-Fi 7",
+      "**Secure Access:** Cloudflare Zero Trust tunnels with no direct inbound firewall exposure",
+      "**Services:** 15+ self-hosted workloads including Home Assistant, Frigate, n8n, Plex, MinIO, and Minecraft",
+      "**Development:** Mac Mini M4 and GMKTEC K8 Plus for primary development and AI workloads"
+    ]
 
   }
 } 
