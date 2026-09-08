@@ -94,7 +94,7 @@
     "isRedacted": false,
     "details": {
       "client": "Open Source",
-      "completed": "Astral Hive"
+      "completed": "May 2026"
     }
   },
   {
@@ -108,7 +108,26 @@
     "isRedacted": false,
     "details": {
       "client": "Open Source",
-      "completed": "Astral Hive"
+      "completed": "August 2026"
+    }
+  },
+  {
+    "id": 21,
+    "title": "NeoBrix",
+    "category": "desktop",
+    "image": "assets/images/portfolio/neobrix.svg",
+    "description": "A neo-brutalist desktop environment for Hyprland, built with Quickshell and QML.",
+    "tags": [
+      "Linux",
+      "Hyprland",
+      "QML",
+      "Open Source"
+    ],
+    "url": "https://github.com/asad-albadi/NeoBrix",
+    "isRedacted": false,
+    "details": {
+      "client": "Open Source",
+      "completed": "August 2026"
     }
   },
   {
